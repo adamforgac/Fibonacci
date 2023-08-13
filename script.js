@@ -15,3 +15,19 @@ function fibs(n) {
 }
 
 console.log(fibs(10));
+
+
+
+// USING RECURSION
+
+function fibsRecur(n, arr = [0, 1]) {
+    if(n <= arr.length) {
+        return arr
+    } else {
+        const nextFib = arr[arr.length - 2] + arr[arr.length - 1]
+        arr.push(nextFib);
+        return fibsRecur(n, arr);
+    }
+}
+
+console.log(fibsRecur(10));
